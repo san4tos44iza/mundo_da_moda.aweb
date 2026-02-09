@@ -27,23 +27,18 @@ def registrar():
 
     cursor = db.cursor()
     
-    # 1. Verifica se o e-mail já existe no banco
+
     cursor.execute("SELECT senha FROM usuarios WHERE email = %s", (email,))
     usuario = cursor.fetchone()
 
     if usuario:
-        # O usuário existe. Vamos checar se a senha está correta.
-        # usuario[0] contém a senha vinda do SELECT
         senha_do_banco = usuario[0]
         
         if senha_fornecida == senha_do_banco:
-            # Senha correta: Segue para a página principal
             return redirect("/index")
         else:
-            # Senha incorreta: Volta para o login (ou você pode retornar um erro)
             return "Senha incorreta!", 401 
 
-    # 2. Se o usuário não existe, faz o cadastro normal
     sql = "INSERT INTO usuarios (nome, email, senha) VALUES (%s, %s, %s)"
     valores = (nome, email, senha_fornecida)
 
@@ -53,4 +48,5 @@ def registrar():
     return redirect("/index")
 
 if __name__ == "__main__":
+
     app.run(debug=True)
