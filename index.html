@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo da moda | Universo da Moda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --rosa-claro: #fff5f7;
+            --rosa-accent: #f8d7da;
+            --texto: #5a5a5a;
+        }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--rosa-claro); color: var(--texto); }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: #4a4a4a; }
+        
+        .navbar { background-color: #fff !important; border-bottom: 1px solid var(--rosa-accent); }
+        .btn-pink { background-color: var(--rosa-accent); border: none; color: #4a4a4a; }
+        .btn-pink:hover { background-color: #f1c0c4; }
+
+        .hero { padding: 80px 0; text-align: center; background: white; margin-bottom: 50px; }
+        .card-fashion { border: none; border-radius: 15px; overflow: hidden; background: #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.05); transition: 0.3s; }
+        .card-fashion:hover { transform: translateY(-5px); }
+        .img-topic { height: 250px; object-fit: cover; width: 100%; }
+        
+        .carousel-eventos { 
+            max-width: 850px; 
+            margin: 40px auto; 
+        }
+        .img-evento { 
+            height: 450px; 
+            object-fit: cover; 
+            width: 100%; 
+        }
+        .evento-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 40px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+        }
+        .mes-badge {
+            background: var(--rosa-accent);
+            color: #4a4a4a;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        footer { background: white; padding: 40px 0; border-top: 1px solid var(--rosa-accent); margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+            <div class="container">
+                <a class="navbar-brand fw-bold" href="#" style="letter-spacing: 2px;">Mundo da<span style="color: #ebaeb4;">Moda</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <form class="d-flex mx-auto w-50" role="search">
+                        <input class="form-control me-2 rounded-pill border-light-subtle" type="search" placeholder="Pesquisar tendências..." aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero shadow-sm rounded-4">
+            <h1 class="display-4"> Universo Fashion</h1>
+            <p class="lead">Onde a história encontra o luxo e a cultura digital.</p>
+        </section>
+
+        <div class="row g-4">
+            <article class="col-md-6 col-lg-4">
+                <div class="card-fashion h-100">
+                    <img src="static/historia da moda.webp" class="img-topic" alt="História">
+                    <div class="card-body p-4">
+                        <h3>História da Moda</h3>
+                        <p class="small">A moda como forma de expressão:
+                            <br>A moda sempre foi muito mais do que apenas roupas. Desde os primeiros tempos, 
+                            ela funciona como uma forma de expressar identidade, cultura, status social e época histórica. 
+                            O modo de vestir acompanha as mudanças da sociedade e reflete valores, costumes e transformações sociais.</br>
+                            <br>Moda na Antiguidade:<br>
+                            <br>Nas civilizações antigas, como Egito, Grécia e Roma, as roupas indicavam classe social, 
+                            gênero e função social. Tecidos, cores e acessórios tinham significados específicos.
+                            No Egito, por exemplo, o linho era muito usado por causa do clima quente, enquanto na Grécia
+                            as roupas valorizavam o corpo e a simplicidade.</br>
+                            <br>Moda na Idade Média:</br>
+                            <br>Durante a Idade Média, a moda era fortemente influenciada pela religião e pela hierarquia social.
+                             As roupas eram mais fechadas e discretas, e apenas a nobreza tinha acesso a tecidos caros e detalhados. 
+                             A vestimenta servia para mostrar posição social e respeito às regras da época.</br>
+                            <br>Moda Moderna e Contemporânea:</br>
+                            <br>A partir da Idade Moderna, a moda começou a se transformar rapidamente. 
+                            Com a Revolução Industrial, a produção de roupas aumentou e a moda se tornou mais acessível. 
+                            No século XX, surgiram grandes estilistas, tendências marcantes e a ideia de moda como liberdade, 
+                            criatividade e expressão individual, algo que continua forte até hoje.</br>
+                            </p>
+                    </div>
+                </div>
+            </article>
+    
+            <article class="col-md-6 col-lg-4">
+                <div class="card-fashion h-100">
+                    <img src="static/impacto na tv e no cinema.png" class="img-topic" alt="Cinema">
+                    <div class="card-body p-4">
+                        <h3>Moda na TV & Cinema</h3>
+                        <p class="small">A moda como narrativa visual:
+
+                            <br>Na televisão e no cinema, a moda é usada como uma ferramenta narrativa. As roupas ajudam a construir personagens,
+                                indicar épocas históricas, mostrar personalidade e até o estado emocional de quem aparece em cena.</br>
+                            <br> Cinema e a criação de tendências:</br>
+                            <br> Muitos filmes marcaram época não só pelas histórias, mas também pelos figurinos.
+                                Personagens icônicos influenciaram gerações e transformaram roupas e estilos em tendências mundiais.
+                                O cinema ajuda a popularizar estilos e a levar a moda para um público muito maior.</br>
+                            <br>A influência das séries de TV:</br>
+                            <br>As séries de TV têm um papel enorme na moda atual. Personagens se tornam referências de estilo,
+                                e o público passa a copiar roupas, cortes de cabelo e acessórios.
+                                Isso fortalece a relação entre moda, identidade e comportamento social.</br>
+                            <br>Moda, mídia e consumo:</br>
+                            <br>A TV e o cinema também influenciam diretamente o consumo.
+                                Marcas ganham visibilidade, estilos se popularizam rapidamente e a moda se renova com mais velocidade.</br> 
+                                Assim, a mídia se torna uma grande aliada da indústria da moda, ajudando a moldar gostos e tendências.</p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="col-md-6 col-lg-4">
+                <div class="card-fashion h-100">
+                    <img src="static/tendencias e impacto cultural.webp" class="img-topic" alt="Tendências">
+                    <div class="card-body p-4">
+                        <h3>Tendências & impacto Cultural</h3>
+                        <p class="small">A moda vai muito além do vestir: ela reflete comportamentos, movimentos <br>
+                                        sociais e transformações culturais de cada época. As tendências surgem das <br>
+                                        ruas, das redes sociais, da música e da arte, influenciando a forma como <br>
+                                        as pessoas se expressam e se reconhecem no mundo.<br>
+                                        Ao longo da história, a moda funcionou como um espelho das mudanças sociais,<br> 
+                                        acompanhando transformações políticas, econômicas e ideológicas. Momentos de <br>
+                                        ruptura, como movimentos feministas, lutas por direitos civis e revoluções <br>
+                                        culturais, impactaram diretamente as formas de vestir, tornando a roupa uma <br>
+                                        ferramenta de afirmação identitária e posicionamento social.<br>
+                                        Com o avanço da tecnologia e da comunicação digital, o ritmo das tendências <br>
+                                        tornou-se mais acelerado e globalizado. As redes sociais ampliaram o alcance <br>
+                                        da moda, permitindo que diferentes culturas, estilos e narrativas ganhassem <br>
+                                        visibilidade. Influenciadores, criadores independentes e consumidores passaram <br>
+                                        a participar ativamente da construção das tendências, democratizando o acesso <br>
+                                        e a produção de moda.<br>
+                                        Marcas e estilistas passaram a repensar seus processos e discursos, utilizando <br>
+                                        a moda como meio de conscientização e reflexão social. Dessa forma, vestir-se <br>
+                                        deixa de ser apenas uma escolha estética e passa a representar valores, causas e<br>
+                                        formas de pertencimento cultural.</p>
+                    </div>
+                </div>
+            </article>
+                
+            <article class="col-md-6 col-lg-4">
+                <div class="card-fashion h-100">
+                    <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?q=80&w=600" class="img-topic" alt="Estilistas">
+                    <div class="card-body p-4">
+                        <h3>Estilistas de Impacto</h3>
+                        <p class="small">A história da moda é marcada por estilistas que transformaram o vestir em<br>
+                                        diálogo com seu contexto social e cultural. No final do século XIX, Charles <br>
+                                        Frederick Worth inaugurou a moda moderna ao profissionalizar a alta-costura. <br>
+                                        Nas décadas de 1910 e 1920, Paul Poiret libertou as mulheres do espartilho, <br>
+                                        enquanto Coco Chanel redefiniu a elegância com conforto e funcionalidade.<br>
+                                        Nos anos 1930, Elsa Schiaparelli aproximou moda e arte por meio do surrealismo.<br> 
+                                        Após a Segunda Guerra, Christian Dior impactou a indústria com o New Look, exaltando<br> 
+                                        a feminilidade. As décadas de 1950 e 1960 trouxeram a inovação técnica de Balenciaga<br> 
+                                        e a revolução cultural de Mary Quant e Yves Saint Laurent, que desafiaram padrões <br>
+                                        de gênero e comportamento.<br>
+                                        Nos anos 1970, Vivienne Westwood usou a moda como protesto punk, e Diane von Fürstenberg<br>
+                                        simbolizou a emancipação feminina com o vestido envelope. A década de 1980 destacou <br>
+                                        o poder e o exagero com Armani, Gaultier e Versace. Já nos anos 1990, McQueen, Galliano <br>
+                                        e Miuccia Prada trouxeram uma moda conceitual e provocativa.<br>
+                                        A partir dos anos 2000, a moda tornou-se global e midiática, com nomes como Karl Lagerfeld<br> 
+                                        e Tom Ford. Na atualidade, estilistas como Virgil Abloh, Demna Gvasalia e Stella McCartney <br>
+                                        refletem temas como diversidade, crítica ao consumo e sustentabilidade.</p>
+                    </div>
+                </div>
+            </article>
+                
+            <article class="col-md-6 col-lg-4">
+                <div class="card-fashion h-100">
+                    <img src="static/nichos da moda.jpg" class="img-topic" alt="Nichos">
+                    <div class="card-body p-4">
+                        <h3>Alta costura & Fast Fashion</h3>
+                        <p class="small">A alta-costura e o fast fashion representam extremos opostos da indústria <br>
+                                        da moda, com diferenças profundas em seus processos produtivos, valores e <br>
+                                        impactos sociais e culturais. Embora coexistam no mesmo sistema, suas <br>
+                                        propostas são bastante distintas.<br>
+                                        A alta-costura é o nível mais elevado da criação de moda, caracterizada pela<br> 
+                                        exclusividade, pelo trabalho artesanal e pela produção sob medida. Regulamentada<br> 
+                                        pela Fédération de la Haute Couture et de la Mode, exige técnicas tradicionais,<br>
+                                        materiais nobres e inúmeras horas de trabalho, fazendo com que cada peça seja <br>
+                                        vista como uma obra de arte, carregada de valor simbólico e cultural.<br>
+                                        Já o fast fashion baseia-se na produção rápida, em larga escala e a baixo custo,<br> 
+                                        reproduzindo tendências de forma acelerada. Esse modelo incentiva o consumo <br>
+                                        constante e o descarte rápido, utilizando processos industriais e mão de obra <br>
+                                        terceirizada, sendo frequentemente criticado por seus impactos ambientais e sociais.<br>
+                                        Assim, enquanto a alta-costura valoriza tempo, exclusividade e saber artesanal, <br>
+                                        o fast fashion prioriza velocidade, acessibilidade e lucro, refletindo visões <br>
+                                        opostas sobre criação e consumo na moda contemporânea.</p>
+                    </div>
+                </div>
+            </article>
+                
+            <article class="col-md-6 col-lg-4">
+                <div class="card-fashion h-100">
+                    <img src="static/revistas3.jfif" class="img-topic" alt="Revistas">
+                    <div class="card-body p-4">
+                        <h3>Revistas de Moda</h3>
+                        <p class="small">Vogue, Elle e Harper’s Bazaar ocupam um papel central na história da moda <br>
+                                        e do jornalismo cultural, influenciando tendências, comportamentos e a consolidação <br>
+                                        de estilistas ao longo de décadas. Mais do que simples publicações, tornaram-se <br>
+                                        referências globais que conectam moda, arte e sociedade.<br>
+                                        A Vogue, fundada em 1892, consolidou-se como a principal autoridade mundial em moda<br> 
+                                        ao investir em fotografia autoral, editoriais conceituais e na valorização de grandes <br>
+                                        criadores. Atualmente, mantém sua relevância ao atuar de forma multiplataforma e dialogar <br>
+                                        com temas contemporâneos como diversidade e sustentabilidade.<br>
+                                        A Harper’s Bazaar, criada em 1867, sempre tratou a moda como expressão artística,<br> 
+                                        destacando-se por uma abordagem sofisticada e editorial. Já a Elle, fundada em 1945, <br>
+                                        surgiu com a proposta de democratizar a moda, combinando estilo com temas sociais, <br>
+                                        comportamento e empoderamento feminino.<br>
+                                        Essas revistas atuam como mediadoras entre marcas, estilistas e consumidores, legitimando<br> 
+                                        tendências e construindo narrativas que moldam o imaginário da moda. Mesmo diante do <br>
+                                        crescimento das redes sociais, continuam sendo referências de curadoria, autoridade e <br>
+                                        memória histórica da indústria.</p>
+                    </div>
+                </div>
+            </article>
+                
+            <article class="col-12">
+                <div class="card-fashion">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="static/marcas.jpg" class="img-topic h-100" alt="Marcas">
+                        </div>
+                        <div class="col-md-6 p-5 d-flex flex-column justify-content-center">
+                            <h3>Marcas Globais</h3>
+                            <p> As marcas de moda vão além da função de vestir, tornando-se importantes vetores de cultura,<br>
+                                comportamento e identidade. Por meio do design, do propósito e da narrativa, elas constroem<br>
+                                conexões emocionais com o público e influenciam hábitos de consumo em escala global.<br>
+                                Exemplos como Chanel representam um legado de elegância e emancipação feminina, enquanto<br> 
+                                a Nike transforma o esporte em símbolo de superação e empoderamento. Marcas como Patagonia <br>
+                                destacam-se pelo compromisso com a sustentabilidade, e casas como Gucci e Balenciaga utilizam<br>
+                                a ousadia estética para refletir o espírito contemporâneo. No Brasil, Farm e Osklen traduzem<br>
+                                o estilo de vida nacional em uma linguagem visual marcada pela identidade cultural.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <section class="carousel-eventos">
+                    <h2 class="text-center mb-4">Calendário da Moda Global</h2>
+                    <div id="carouselFashionCalendar" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselFashionCalendar" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#carouselFashionCalendar" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselFashionCalendar" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#carouselFashionCalendar" data-bs-slide-to="3"></button>
+                            <button type="button" data-bs-target="#carouselFashionCalendar" data-bs-slide-to="4"></button>
+                            <button type="button" data-bs-target="#carouselFashionCalendar" data-bs-slide-to="5"></button>
+                            <button type="button" data-bs-target="#carouselFashionCalendar" data-bs-slide-to="6"></button>
+                            <button type="button" data-bs-target="#carouselFashionCalendar" data-bs-slide-to="7"></button>
+                        </div>
+                        <div class="carousel-inner rounded-4 shadow">
+                            
+                            <div class="carousel-item active">
+                                <div class="card-evento-mes position-relative">
+                                    <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=800&auto=format&fit=crop" class="img-evento" alt="Semana de Moda Masculina">
+                                    <div class="evento-overlay">
+                                        <span class="mes-badge">Janeiro</span>
+                                        <h3>Semana de Alta Costura & Menswear</h3>
+                                        <p class="mb-0">Paris abre o ano com a exclusividade da Alta Costura e o início das semanas de moda masculina.</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="carousel-item">
+                                <div class="card-evento-mes position-relative">
+                                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop" class="img-evento" alt="Desfile Inverno">
+                                    <div class="evento-overlay">
+                                        <span class="mes-badge">Fevereiro</span>
+                                        <h3>O "Big 4" (Outono/Inverno)</h3>
+                                        <p class="mb-0">Nova York, Londres, Milão e Paris apresentam suas coleções de Outono/Inverno.</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="carousel-item">
+                                <div class="card-evento-mes position-relative">
+                                    <img src="https://images.unsplash.com/photo-1566737236500-c8ac43014a67?q=80&w=800&auto=format&fit=crop" class="img-evento" alt="Tapete Vermelho">
+                                    <div class="evento-overlay">
+                                        <span class="mes-badge">Março</span>
+                                        <h3>Red Carpet Season</h3>
+                                        <p class="mb-0">Mês marcado pelo glamour do Oscar, onde as marcas vestem as maiores estrelas do cinema.</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="carousel-item">
+                                <div class="card-evento-mes position-relative">
+                                    <img src="https://images.unsplash.com/photo-1595777457583-95e059d581b8?q=80&w=800&auto=format&fit=crop" class="img-evento" alt="Gala">
+                                    <div class="evento-overlay">
+                                        <span class="mes-badge">Maio</span>
+                                        <h3>Met Gala & Cannes</h3>
+                                        <p class="mb-0">O baile mais famoso do mundo em NY e o tapete vermelho do festival de cinema na Riviera Francesa.</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="carousel-item">
+                                <div class="card-evento-mes position-relative">
+                                    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?q=80&w=800&auto=format&fit=crop" class="img-evento" alt="Moda Verão">
+                                    <div class="evento-overlay">
+                                        <span class="mes-badge">Junho</span>
+                                        <h3>Resort & Menswear (Primavera/Verão)</h3>
+                                        <p class="mb-0">Apresentação das coleções "Cruise" ou "Resort" e nova temporada masculina.</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="carousel-item">
+                                <div class="card-evento-mes position-relative">
+                                    <img src="https://images.unsplash.com/photo-1520006403909-838d6b92c22e?q=80&w=800&auto=format&fit=crop" class="img-evento" alt="Moda Escandinava">
+                                    <div class="evento-overlay">
+                                        <span class="mes-badge">Agosto</span>
+                                        <h3>Copenhagen Fashion Week</h3>
+                                        <p class="mb-0">Foco em sustentabilidade e estilo escandinavo, além das campanhas de "Back to School".</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="carousel-item">
+                                <div class="card-evento-mes position-relative">
+                                    <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b?q=80&w=800&auto=format&fit=crop" class="img-evento" alt="Fashion Week">
+                                    <div class="evento-overlay">
+                                        <span class="mes-badge">Setembro</span>
+                                        <h3>O Mês da Moda (Primavera/Verão)</h3>
+                                        <p class="mb-0">O mês mais importante do ano. O circuito NY-Londres-Milão-Paris define o próximo verão.</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="carousel-item">
+                                <div class="card-evento-mes position-relative">
+                                    <img src="https://images.unsplash.com/photo-1512413914633-b5043f4041ea?q=80&w=800&auto=format&fit=crop" class="img-evento" alt="Premiação">
+                                    <div class="evento-overlay">
+                                        <span class="mes-badge">Dezembro</span>
+                                        <h3>Fashion Awards & Pre-Fall</h3>
+                                        <p class="mb-0">Premiações dos melhores do ano (British Fashion Awards) e prévias de Outono.</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+                        
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselFashionCalendar" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselFashionCalendar" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer class="text-center">
+        <p class="mb-0 fw-light"> 2026 Mundo da Moda - Design Minimalista & Elegante</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
