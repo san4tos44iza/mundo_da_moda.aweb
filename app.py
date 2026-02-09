@@ -3,7 +3,6 @@ import MySQLdb
 
 app = Flask(__name__)
 
-# Configuração do Banco de Dados
 db = MySQLdb.connect(
     host="127.0.0.1",
     user="root",
@@ -50,3 +49,4 @@ def registrar():
 if __name__ == "__main__":
 
     app.run(debug=True)
+
